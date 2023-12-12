@@ -5,15 +5,15 @@ from github import Github
 current_folder = os.path.basename(os.getcwd())
 
 # Ваш логин и пароль для GitHub
-username = "your_username"
-password = "your_password"
+username = "koma1236"
+password = "uvodip99"
 
 # Создаем экземпляр класса Github
-g = Github('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')
+g = Github('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')
 
 # Получаем пользователя
 user = g.get_user()
-
+print(user)
 # Проверяем, существует ли репозиторий с именем текущей папки
 try:
     repo = user.get_repo(current_folder)
@@ -24,6 +24,7 @@ except:
     print("Репозиторий успешно создан.")
 
 # Добавляем все файлы из текущей папки в репозиторий
+
 files = os.listdir()
 for file_name in files:
     try:
